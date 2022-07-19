@@ -5,8 +5,6 @@
 type IdResponse {
   id: String!
 }
-
-type UserResponse {
   email: String!
   country: String!
   postalCode: String!
@@ -16,8 +14,6 @@ type UserResponse {
 type Query {
   findUsers(input: FindUsersRequest!): [UserResponse!]!
 }
-
-input FindUsersRequest {
   country: String
   postalCode: String
   street: String
@@ -30,6 +26,5 @@ type Mutation {
 input CreateUserRequest {
   email: String!
   country: String!
-  postalCode: String!
   street: String!
 }
